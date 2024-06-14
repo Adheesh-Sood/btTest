@@ -12,7 +12,7 @@
 function generateAndDisplayQR() {
     var name = encodeURIComponent(document.getElementById('name').value);
     var email = encodeURIComponent(document.getElementById('email').value);
-    var url = `./display.html?name=${name}&email=${email}`;
+    var url = `https://adheesh-sood.github.io/btTest/display.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
 
     var qr = qrcode(0, 'L');
     qr.addData(url);
